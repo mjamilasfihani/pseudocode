@@ -1,0 +1,12 @@
+INPUT "buku" AS STRING
+
+IF "buku" equal "pinjam"
+	RETURN FUNCTION layanan(DATETIME, "pinjam")
+ELSE IF "buku" equal "dikembalikan"
+	RETURN FUNCTION layanan(DATETIME, "dikembalikan")
+ELSE
+	PRINT "tidak ada layanan"
+
+FUNCTION layanan(datetime, type)
+	PRINT type + " pada " + datetime
+ENDFUNCTION
